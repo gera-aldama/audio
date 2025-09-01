@@ -19,10 +19,8 @@ print(torchaudio.__version__)
 if torch.accelerator.is_available():
     acc = torch.accelerator.current_accelerator()
     device = torch.device(acc)
-    backend = torch.distributed.get_default_backend_for_device(device)
 else:
     device = torch.device("cpu")
-    backend = "gloo"
 print(f"Using device: {device}")
 
 ######################################################################
