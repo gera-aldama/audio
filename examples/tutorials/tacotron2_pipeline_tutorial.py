@@ -116,7 +116,7 @@ print(text_to_sequence(text))
 
 processor = torchaudio.pipelines.TACOTRON2_WAVERNN_CHAR_LJSPEECH.get_text_processor()
 
-text = "Hello world! Text to speech!\n" * 1000
+text = "Hello world! Text to speech!"
 processed, lengths = processor(text)
 
 print(processed)
